@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <!-- ===== הגדרות בסיסיות ===== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lamsat Hub — كل تفاصيل السعادة</title>
+
+  <!-- ===== קישור לקובץ העיצוב הראשי ===== -->
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- ===== פונטים מגוגל: Cairo לערבית + Playfair Display לכותרות ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ===== סרט הודעה עליון — מתחלף כל כמה שניות ===== -->
+<div class="top_offer_bar" id="offerBar">
+  <span id="offerText">🚚 اطلب فوق <bdi>300 ₪</bdi> واحصل على توصيل مجاني</span>
+</div>
+
+<!-- ===== כותרת עליונה נדבקת — נשארת למעלה בגלילה ===== -->
+<header class="header">
+
+  <!-- ===== סרט אדום תחת ה-top_offer_bar עם הודעה שיווקית ===== -->
+  <div class="header-top">
+    <span>✨ كولكشن 2026 وصل — اطلب قبل ما ينتهي</span>
+  </div>
+
+  <!-- ===== ניווט ראשי ===== -->
+  <nav class="navbar">
+
+    <!-- ===== קישורי ניווט — ימין ===== -->
+    <div class="nav-right">
+      <a href="#" class="nav-link">الرئيسية</a>
+      <a href="pages/shop.html" class="nav-link">المتجر</a>
+      <a href="#categories" class="nav-link">الفئات</a>
+      <a href="#about" class="nav-link">من نحن</a>
+    </div>
+
+    <!-- ===== לוגו מרכזי ===== -->
+    <div class="logo">
+      <a href="index.html">LAMSAT<span>HUB</span></a>
+    </div>
+
+    <!-- ===== אייקונים — שמאל: חיפוש, מועדפים, עגלה ===== -->
+    <div class="nav-left">
+
+      <!-- כפתור חיפוש -->
+      <button class="icon-btn" id="searchBtn" title="بحث">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.35-4.35"/>
+        </svg>
+      </button>
+
+      <!-- כפתור מועדפים + תגית מספר -->
+      <button class="icon-btn" id="wishlistBtn" title="المفضلة">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+        <span class="badge" id="wishlistCount">0</span>
+      </button>
+
+      <!-- כפתור עגלה + תגית מספר פריטים -->
+      <button class="icon-btn" id="cartBtn" title="سلة التسوق">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <span class="badge" id="cartCount">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== שורת חיפוש — נפתחת בלחיצה על האייקון ===== -->
+  <div class="search-bar" id="searchBar">
+    <input type="text" placeholder="ابحث عن منتج، ماركة، فئة..." id="searchInput"/>
+    <button id="searchClose">✕</button>
+  </div>
+
+</header>
+
+<!-- ===== סקשן Hero — הבאנר הגדול בדף הבית ===== -->
+<section class="hero">
+
+  <!-- ===== רקע גרדיאנט דקורטיבי ===== -->
+  <div class="hero-bg"></div>
+
+  <!-- ===== תוכן טקסטואלי בצד ימין ===== -->
+  <div class="hero-content">
+
+    <!-- תת-כותרת קטנה מעל ===== -->
+    <p class="hero-sub">كولكشن 2026 ✦</p>
+
+    <!-- ===== כותרת ראשית גדולה ===== -->
+    <h1 class="hero-title">
+      الهـديـة لديـنا<br/>ليسـت مجرد غـرض
+      <em>بل لمسة حب وتفاصيل تروي قصة 💌</em>
+    </h1>
+
+    <!-- ===== תיאור קצר ===== -->
+    <p class="hero-desc">جميع أنواع الهدايا — بجودة عالية وأسعار تنافسية</p>
+
+    <!-- ===== כפתורי פעולה ===== -->
+    <div class="hero-btns">
+      <a href="pages/shop.html" class="btn-primary">تسوقي الآن</a>
+      <a href="#categories" class="btn-ghost">تصفحي الفئات</a>
+    </div>
+
+    <!-- ===== תגיות אמון מתחת לכפתורים ===== -->
+    <div class="hero-trust">
+      <span>✅ توصيل سريع</span>
+      <span>🔄 إرجاع مجاني</span>
+      <span>💳 دفع آمن</span>
+    </div>
+  </div>
+
+  <!-- ===== תמונת לוגו בצד שמאל ===== -->
+  <div class="hero-image">
+    <div class="hero-img-placeholder">
+      <!-- תמונת הלוגו — שים את הקובץ lamsat.jpg בתיקיית הבסיס -->
+      <img src="lamsat.jpg" alt="Lamsat Hub Gifts" class="hero-logo-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+      <!-- גיבוי אם התמונה לא נמצאת -->
+      <div class="hero-logo-fallback" style="display:none">
+        <span>💝</span>
+        <p>LAMSAT HUB</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== סקשן סטטיסטיקות / אמון ===== -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <strong>+500</strong>
+        <span>عميلة سعيدة</span>
+      </div>
+      <div class="stat-item">
+        <strong>+100</strong>
+        <span>منتج متوفر</span>
+      </div>
+      <div class="stat-item">
+        <strong>4.9 ⭐</strong>
+        <span>تقييم العملاء</span>
+      </div>
+      <div class="stat-item">
+        <strong>24/7</strong>
+        <span>خدمة العملاء</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== סקשן קטגוריות ===== -->
+<section class="categories" id="categories">
+  <div class="container">
+    <h2 class="section-title">تسوقي حسب الفئة</h2>
+    <div class="categories-grid">
+
+      <!-- קטגוריה: תיקים גדולים -->
+      <a href="pages/shop.html?cat=big" class="cat-card">
+        <div class="cat-icon">
+          <svg width="48" height="48" fill="none" viewBox="0 0 48 48">
+            <rect x="6" y="14" width="36" height="26" rx="4" stroke="currentColor" stroke-width="2"/>
+            <path d="M16 14 Q24 6 32 14" stroke="currentColor" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <span>شنط كبيرة ومتوسطة</span>
+      </a>
+
+      <!-- קטגוריה: תיקים קטנים -->
+      <a href="pages/shop.html?cat=small" class="cat-card">
+        <div class="cat-icon">
+          <svg width="48" height="48" fill="none" viewBox="0 0 48 48">
+            <rect x="12" y="16" width="24" height="20" rx="4" stroke="currentColor" stroke-width="2"/>
+            <path d="M18 16 Q24 8 30 16" stroke="currentColor" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <span>شنط صغيرة</span>
+      </a>
+
+      <!-- קטגוריה: ארנקים -->
+      <a href="pages/shop.html?cat=wallet" class="cat-card">
+        <div class="cat-icon">
+          <svg width="48" height="48" fill="none" viewBox="0 0 48 48">
+            <rect x="4" y="14" width="40" height="24" rx="4" stroke="currentColor" stroke-width="2"/>
+            <rect x="28" y="20" width="12" height="12" rx="2" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="34" cy="26" r="2" fill="currentColor"/>
+          </svg>
+        </div>
+        <span>محافظ</span>
+      </a>
+
+      <!-- קטגוריה: אביזרים -->
+      <a href="pages/shop.html?cat=accessories" class="cat-card">
+        <div class="cat-icon">
+          <svg width="48" height="48" fill="none" viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/>
+            <circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="2"/>
+            <line x1="24" y1="8" x2="24" y2="14" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <span>إكسسوارات</span>
+      </a>
+
+      <!-- קטגוריה: שעונים -->
+      <a href="pages/shop.html?cat=watches" class="cat-card">
+        <div class="cat-icon">
+          <svg width="48" height="48" fill="none" viewBox="0 0 48 48">
+            <rect x="16" y="12" width="16" height="24" rx="3" stroke="currentColor" stroke-width="2"/>
+            <line x1="10" y1="18" x2="16" y2="18" stroke="currentColor" stroke-width="2"/>
+            <line x1="10" y1="30" x2="16" y2="30" stroke="currentColor" stroke-width="2"/>
+            <line x1="32" y1="18" x2="38" y2="18" stroke="currentColor" stroke-width="2"/>
+            <line x1="32" y1="30" x2="38" y2="30" stroke="currentColor" stroke-width="2"/>
+            <line x1="24" y1="20" x2="24" y2="24" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="24" y1="24" x2="27" y2="24" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <span>ساعات</span>
+      </a>
+
+      <!-- קטגוריה: מבצעים — מודגשת בצבע שונה -->
+      <a href="pages/shop.html?cat=sale" class="cat-card cat-sale">
+        <div class="cat-icon">
+          <svg width="48" height="48" fill="none" viewBox="0 0 48 48">
+            <path d="M8 8h14l18 18-14 14L8 22V8z" stroke="currentColor" stroke-width="2"/>
+            <circle cx="17" cy="17" r="3" fill="currentColor" opacity="0.4"/>
+          </svg>
+        </div>
+        <span>عروض 🔥</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== סקשן מוצרים נבחרים — נטען דינמית מ-js/data.js ===== -->
+<section class="featured" id="featured">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">منتجات مختارة</h2>
+      <a href="pages/shop.html" class="see-all">كل المنتجات ←</a>
+    </div>
+    <!-- ===== הגריד מתמלא אוטומטית מ-main.js ===== -->
+    <div class="products-grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<!-- ===== סקשן המלצות לקוחות ===== -->
+<section class="testimonials">
+  <div class="container">
+    <h2 class="section-title">ماذا قالت عنا عملاؤنا</h2>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"الهدية وصلت بشكل رائع والتغليف كان فخم جداً، شكراً Lamsat Hub!"</p>
+        <span class="reviewer">— سارة م.</span>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"طلبت هدية لصديقتي وجاءت أحلى من توقعاتي، سأكرر الطلب بالتأكيد"</p>
+        <span class="reviewer">— نور ع.</span>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"توصيل سريع وخدمة ممتازة، أفضل متجر هدايا جربته"</p>
+        <span class="reviewer">— ريم ح.</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== סקשן מותגים — גלילה אוטומטית ===== -->
+<section class="brands" id="brands">
+  <div class="container">
+    <h2 class="section-title">ماركاتنا</h2>
+  </div>
+  <!-- ===== הרצועה נגללת אוטומטית — מוכפלת ב-JS ===== -->
+  <div class="brands-scroll">
+    <span>GUCCI</span><span>CHANEL</span><span>LOUIS VUITTON</span>
+    <span>PRADA</span><span>DIOR</span><span>HERMÈS</span>
+    <span>COACH</span><span>MICHAEL KORS</span><span>FENDI</span>
+    <span>SAINT LAURENT</span><span>CELINE</span><span>MIU MIU</span>
+  </div>
+</section>
+
+<!-- ===== סקשן "מי אנחנו" ===== -->
+<section class="about-strip" id="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-text">
+        <h2>من نحن 💝</h2>
+        <p>Lamsat Hub هو متجر هدايا متخصص يقدم أجمل وأرقى المنتجات بلمسة شخصية مميزة. نؤمن أن كل هدية تحمل قصة، ونحن هنا لنجعل قصتك لا تُنسى.</p>
+        <p>تأسس المتجر بيد ماريا، بشغف حقيقي لتفاصيل الفرح والاحتفاء بكل المناسبات.</p>
+        <a href="https://wa.me/+972509982232" class="btn-primary" target="_blank">تواصلي معنا على واتساب</a>
+      </div>
+      <div class="about-img">
+        <div class="about-img-circle">
+          <img src="lamsat.jpg" alt="Lamsat Hub"
+               onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'font-size:80px\'>💝</span>'"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== כפתור וואטסאפ צף — נראה בכל הדפים ===== -->
+<a href="https://wa.me/972?text=مرحباً%20،%20أنا%20مهتمة%20بمنتجاتكم%20وأريد%20الاستفسار%20عن%20بعض%20التفاصيل%20💝"   class="whatsapp-float" target="_blank" title="تواصلي معنا">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+  </svg>
+</a>
+
+<!-- ===== עגלת קניות — Sidebar מהצד השמאלי ===== -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h3>سلة التسوق 🛍️</h3>
+    <button id="cartClose">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">السلة فارغة</div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>المجموع:</span>
+      <span id="cartTotal">₪0</span>
+    </div>
+    <a href="pages/checkout.html" class="btn-primary full-width" id="checkoutBtn">إتمام الطلب</a>
+  </div>
+</aside>
+
+<!-- ===== פוטר — חלק תחתון של האתר ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- עמודה 1: לוגו ותיאור -->
+      <div>
+        <div class="footer-logo">LAMSAT<span>HUB</span></div>
+        <p>متجر هدايا متخصص — كل لمسة بحب وعناية ✨</p>
+        <p style="margin-top:8px">by Maria 💝</p>
+      </div>
+
+      <!-- עמודה 2: ניווט -->
+      <div>
+        <h4>روابط سريعة</h4>
+        <a href="index.html">الرئيسية</a>
+        <a href="pages/shop.html">المتجر</a>
+        <a href="#about">من نحن</a>
+        <a href="#categories">الفئات</a>
+      </div>
+
+      <!-- עמודה 3: שירות לקוחות -->
+      <div>
+        <h4>خدمة العملاء</h4>
+        <a href="#">سياسة الإرجاع</a>
+        <a href="#">معلومات التوصيل</a>
+        <a href="#">أسئلة شائعة</a>
+      </div>
+
+      <!-- עמודה 4: פרטי קשר -->
+      <div>
+        <h4>تواصلي معنا</h4>
+        <p>📱 050-000-0000</p>
+        <p>✉️ info@lamsathub.com</p>
+        <p>📸 @lamsathub</p>
+      </div>
+
+    </div>
+
+    <!-- שורה תחתונה של הפוטר -->
+    <div class="footer-bottom">
+      <p>© 2026 Lamsat Hub — جميع الحقوق محفوظة 💝</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== קבצי JavaScript ===== -->
+<script src="js/data.js"></script>   <!-- נתוני המוצרים -->
+<script src="js/cart.js"></script>   <!-- לוגיקת העגלה -->
+<script src="js/main.js"></script>   <!-- לוגיקת דף הבית -->
+
+<!-- ===== סקריפט החלפת הודעות ב-top_offer_bar ===== -->
+<script>
+  // הודעות שיתחלפו כל 4 שניות בסרט העליון
+  const offers = [
+    '🚚 اطلب فوق <bdi>300 ₪</bdi> واحصل على توصيل مجاني',
+    '🔄 إرجاع مجاني خلال 14 يوم',
+    '💳 دفع آمن ومضمون 100%',
+    '🎁 تغليف هدايا فاخر مجاني مع كل طلب'
+  ];
+  let offerIdx = 0;
+  setInterval(() => {
+    offerIdx = (offerIdx + 1) % offers.length;
+    const el = document.getElementById('offerText');
+    el.style.opacity = '0';
+    setTimeout(() => {
+      el.innerHTML = offers[offerIdx];
+      el.style.opacity = '1';
+    }, 300);
+  }, 4000);
+</script>
+
+</body>
+</html>
