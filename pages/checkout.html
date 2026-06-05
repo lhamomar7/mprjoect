@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>תשלום — LUXEBAG</title>
+  <title>إتمام الطلب — Lamsat Hub</title>
   <link rel="stylesheet" href="../css/style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
 <header class="header">
-  <div class="header-top">משלוח חינם בקנייה מעל ₪299</div>
+  <div class="header-top">توصيل مجاني عند الشراء فوق ₪299</div>
   <nav class="navbar">
     <div class="nav-right">
-      <a href="../index.html" class="nav-link">← חזרה לחנות</a>
+      <a href="shop.html" class="nav-link">← العودة إلى المتجر</a>
     </div>
-    <div class="logo"><a href="../index.html">LUXE<span>BAG</span></a></div>
+    <div class="logo"><a href="../index.html">LAMSAT<span>HUB</span></a></div>
     <div class="nav-left"></div>
   </nav>
 </header>
@@ -27,56 +27,63 @@
       <!-- FORM -->
       <div>
         <!-- SHIPPING -->
-        <h2 class="form-title">פרטי משלוח</h2>
+        <h2 class="form-title">تفاصيل الشحن</h2>
+
         <div class="form-row">
           <div class="form-group">
-            <label>שם פרטי</label>
-            <input type="text" placeholder="ישראלה"/>
+            <label>الاسم الأول</label>
+            <input type="text" placeholder="مثال: ماريا"/>
           </div>
           <div class="form-group">
-            <label>שם משפחה</label>
-            <input type="text" placeholder="ישראלי"/>
+            <label>اسم العائلة</label>
+            <input type="text" placeholder="مثال: أحمد"/>
           </div>
         </div>
+
         <div class="form-group">
-          <label>אימייל</label>
+          <label>البريد الإلكتروني</label>
           <input type="email" placeholder="email@example.com"/>
         </div>
+
         <div class="form-group">
-          <label>טלפון</label>
+          <label>رقم الهاتف</label>
           <input type="tel" placeholder="050-000-0000"/>
         </div>
+
         <div class="form-group">
-          <label>כתובת</label>
-          <input type="text" placeholder="רחוב, מספר דירה"/>
+          <label>العنوان</label>
+          <input type="text" placeholder="الشارع، رقم البيت، رقم الشقة"/>
         </div>
+
         <div class="form-row">
           <div class="form-group">
-            <label>עיר</label>
-            <input type="text" placeholder="תל אביב"/>
+            <label>المدينة</label>
+            <input type="text" placeholder="مثال: الناصرة"/>
           </div>
           <div class="form-group">
-            <label>מיקוד</label>
-            <input type="text" placeholder="6100000"/>
+            <label>الرمز البريدي</label>
+            <input type="text" placeholder="0000000"/>
           </div>
         </div>
 
         <!-- PAYMENT -->
-        <h2 class="form-title" style="margin-top:40px">אמצעי תשלום</h2>
+        <h2 class="form-title" style="margin-top:40px">طريقة الدفع</h2>
+
         <div class="pay-methods">
-          <div class="pay-method active" onclick="selectPay(this)">💳 כרטיס אשראי</div>
-          <div class="pay-method" onclick="selectPay(this)">📱 ביט / PayBox</div>
+          <div class="pay-method active" onclick="selectPay(this)">💳 بطاقة ائتمان</div>
+          <div class="pay-method" onclick="selectPay(this)">📱 Bit / PayBox</div>
           <div class="pay-method" onclick="selectPay(this)">🟢 PayPal</div>
         </div>
 
         <div id="cardFields">
           <div class="form-group">
-            <label>מספר כרטיס</label>
+            <label>رقم البطاقة</label>
             <input type="text" placeholder="0000 0000 0000 0000" maxlength="19" id="cardNum"/>
           </div>
+
           <div class="form-row">
             <div class="form-group">
-              <label>תוקף</label>
+              <label>تاريخ الانتهاء</label>
               <input type="text" placeholder="MM/YY" maxlength="5"/>
             </div>
             <div class="form-group">
@@ -87,28 +94,33 @@
         </div>
 
         <button class="btn-primary full-width" onclick="placeOrder()" style="margin-top:12px;padding:16px;font-size:16px">
-          ✓ &nbsp; אישור הזמנה ותשלום
+          ✓ &nbsp; تأكيد الطلب والدفع
         </button>
 
         <div class="secure-badges">
-          <span>🔒 SSL מאובטח</span>
-          <span>✓ PCI עמידה בתקן</span>
-          <span>🛡️ תשלום מוצפן</span>
+          <span>🔒 دفع آمن</span>
+          <span>✓ حماية عالية</span>
+          <span>🛡️ معلوماتك مشفّرة</span>
         </div>
       </div>
 
       <!-- ORDER SUMMARY -->
       <div class="order-summary">
-        <h3>סיכום הזמנה</h3>
+        <h3>ملخص الطلب</h3>
+
         <div id="checkoutItems">
-          <div style="color:var(--gray);font-size:14px;text-align:center;padding:20px 0">העגלה ריקה</div>
+          <div style="color:var(--gray);font-size:14px;text-align:center;padding:20px 0">
+            السلة فارغة
+          </div>
         </div>
+
         <div class="summary-item">
-          <span>משלוח</span>
+          <span>التوصيل</span>
           <span id="summaryShipping">₪29</span>
         </div>
+
         <div class="summary-total">
-          <span>סה"כ לתשלום</span>
+          <span>المجموع للدفع</span>
           <span id="summaryTotal">₪0</span>
         </div>
       </div>
@@ -121,29 +133,46 @@
 <div id="successModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:999;align-items:center;justify-content:center">
   <div style="background:white;padding:48px;border-radius:12px;text-align:center;max-width:420px;margin:20px">
     <div style="font-size:64px;margin-bottom:16px">🎉</div>
-    <h2 style="font-family:var(--font-display);font-size:28px;margin-bottom:12px">ההזמנה התקבלה!</h2>
-    <p style="color:var(--gray);margin-bottom:28px;line-height:1.7">תודה רבה! שלחנו אישור לאימייל שלך.<br/>המשלוח יגיע תוך 3–5 ימי עסקים.</p>
-    <a href="../index.html" class="btn-primary">חזרה לחנות</a>
+
+    <h2 style="font-family:var(--font-display);font-size:28px;margin-bottom:12px">
+      تم استلام طلبك!
+    </h2>
+
+    <p style="color:var(--gray);margin-bottom:28px;line-height:1.7">
+      شكراً لكِ! تم إرسال تأكيد الطلب إلى بريدك الإلكتروني.<br/>
+      سيصل الطلب خلال 3–5 أيام عمل.
+    </p>
+
+    <a href="../index.html" class="btn-primary">العودة إلى المتجر</a>
   </div>
 </div>
 
 <footer class="footer" style="margin-top:60px">
   <div class="container">
-    <div class="footer-bottom"><p>© 2026 LuxeBag — כל הזכויות שמורות</p></div>
+    <div class="footer-bottom">
+      <p>© 2026 Lamsat Hub — جميع الحقوق محفوظة</p>
+    </div>
   </div>
 </footer>
 
 <script src="../js/data.js"></script>
 <script src="../js/cart.js"></script>
+
 <script>
 function selectPay(el) {
   document.querySelectorAll('.pay-method').forEach(e => e.classList.remove('active'));
   el.classList.add('active');
-  document.getElementById('cardFields').style.display = el.textContent.includes('כרטיס') ? 'block' : 'none';
+
+  document.getElementById('cardFields').style.display =
+    el.textContent.includes('بطاقة') ? 'block' : 'none';
 }
 
 function placeOrder() {
-  if (cart.length === 0) { alert('העגלה ריקה!'); return; }
+  if (cart.length === 0) {
+    alert('السلة فارغة!');
+    return;
+  }
+
   document.getElementById('successModal').style.display = 'flex';
   cart = [];
   saveCart();
@@ -156,5 +185,6 @@ document.getElementById('cardNum')?.addEventListener('input', function() {
 
 document.addEventListener('DOMContentLoaded', updateCheckoutSummary);
 </script>
+
 </body>
 </html>
